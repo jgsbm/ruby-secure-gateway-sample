@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>test</title>
+</head>
+<body>
+  <h1>JGS Secure Gateway testing app</h1>
+  <p>
+    Acquired number of lines is <%= @data.size %><br>
+    Processing time to get data from db is <%= @result %> seconds
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @data.each do |row| %>
+        <tr>
+          <td><%= row['data'] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
+</html>
