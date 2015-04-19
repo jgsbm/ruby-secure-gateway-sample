@@ -13,7 +13,7 @@ get '/' do
   logger.info("Database is conencted as #{host}:#{port}")
   @result = Benchmark.realtime do
     client = Mysql2::Client.new(
-  		  :host => ENV["CLOUD_HOST"],
+  		:host => ENV["CLOUD_HOST"],
 		  :port => ENV["CLOUD_PORT"],
 		  :username => "root",
 		  :password => "password",
